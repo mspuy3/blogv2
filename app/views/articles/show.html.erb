@@ -1,0 +1,23 @@
+<h1>Show Page</h1>
+
+<p>
+   <h2>Title:</h2>
+   <%= @article.title %>
+</p>
+
+<p>
+   <h2>Author:</h2>
+   <%= @article.author %>
+</p>
+
+<p>
+   <h2>Text:</h2>
+   <%= @article.text %>
+</p>
+
+<p>
+   <h2>Time:</h2>
+   <%= @article.created_at %>
+</p>
+
+<%= link_to 'Back', articles_path %>

@@ -1,0 +1,49 @@
+<h1>New Article</h1>
+
+<%= form_for :article, url: articles_path do |f| %>
+
+<p>
+<% if @article.errors.any? %>
+   <ul>
+      <% @article.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+      <% end %>
+   </ul>
+<% end %>
+</p>
+
+<p>
+   <%= f.label :title %>
+   <br/>
+   <%= f.text_field :title %>
+</p>
+
+<p>
+   <%= f.label :author %>
+   <br/>
+   <%= f.text_field :author %>
+</p>
+
+<p>
+<%= f.label :text %>
+<br/>
+<%= f.text_field :text %>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+
+<% end %>
+
+<%= link_to 'Back', articles_path %>
+
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>

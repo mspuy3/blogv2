@@ -1,38 +1,7 @@
-<h1>Edit Article</h1>
-
-<%= form_for :article, url: articles_path do |f| %>
-
-<% if @article.errors.any? %>
-   <ul>
-      <% @article.errors.full_messages.each do |message| %>
-         <li><%= message %></li>
-      <% end %>
-   </ul>
-<% end %>
 
 
-<p>
-   <%= f.label :title %>
-   <br/>
-   <%= f.text_field :title %>
-</p>
+<div data-controller="article-form">
 
-<p>
-   <%= f.label :author %>
-   <br/>
-   <%= f.text_field :author %>
-</p>
+<%= render "form" %>
 
-<p>
-<%= f.label :text %>
-<br/>
-<%= f.text_field :text %>
-</p>
-
-<p>
-<%= f.submit %>
-</p>
-
-<% end %>
-
-<%= link_to 'Back', articles_path %>
+</div>

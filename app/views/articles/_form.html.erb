@@ -1,0 +1,40 @@
+<%= form_with scope: :article, model: @article, local: true do |f| %>
+
+<p>
+<% if @article.errors.any? %>
+
+   <div class="d-flex flex-wrap justify-content-center fixed-bottom m-5">      
+         <% @article.errors.full_messages.each do |message| %>
+            <div class="alert alert-danger m-3 " role="alert"><%= message %></div>
+         <% end %>
+   </div>
+<% end %>
+</p>
+
+<div class="d-flex flex-row flex-wrap justify-content-center pt-5 mt-5">
+
+      <div class="card m-3 shadow d-flex flex-column justify-content-between bg-light border-0" style="width: 50rem;">
+
+         
+            <div class="card-body d-flex flex-column justify-content-between">
+               <%= f.text_field :title, placeholder: "Title", class: "text-center form-control mb-2" %>
+
+               <%= f.text_field :author, placeholder: "Author", class: "text-center form-control mb-2" %>
+
+               <%= f.text_area :text, placeholder: "Text", class: "text-center form-control mb-2" %>
+
+            </div>
+         
+         <div class="d-flex flex-row justify-content-center m-3">
+         
+            <button type="button" class="btn btn-danger btn mx-3 shadow"><%= link_to 'Cancel', articles_path, class: "text-decoration-none text-white " %></button>
+
+            <%= f.submit 'Publish', class: "btn btn-success btn mx-3 shadow" %>
+         
+         </div>
+      
+      </div>
+
+</div>
+
+<% end %>

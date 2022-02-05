@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple CRUD app for our first mini-project in Rails.
 
-Things you may want to cover:
+## Core Functionalities
 
-* Ruby version
+- Create a *blog post* with Title, Author, and Text
 
-* System dependencies
+- Read all *blog posts* and one *blog post* at a time
 
-* Configuration
+- Update the contents of a *blog post*
 
-* Database creation
+- Destroy a *blog post*
 
-* Database initialization
+## Other Details
 
-* How to run the test suite
+- Implements a simple validation process to ensure that a *blog post* has no empty entry
 
-* Services (job queues, cache servers, search engines, etc.)
+- Uses Bootstrap v5 with additional personal stylings
 
-* Deployment instructions
+- Has a modern card-based interface
 
-* ...
+*-MU 🚀*

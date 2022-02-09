@@ -12,9 +12,15 @@ This is a simple CRUD app for our first mini-project in Rails.
 
 - Destroy a *blog post*
 
+- Create a *comment* for a *blog post* with Name and Comment
+
+- Read all *comments* for a *blog post*
+
+- Destroy a *comment*
+
 ## Other Details
 
-- Implements a simple validation process to ensure that a *blog post* has no empty entry
+- Implements a simple validation process to ensure that a *blog post* or *comment* has no empty entry
 
 - Uses Bootstrap v5 with additional personal stylings
 

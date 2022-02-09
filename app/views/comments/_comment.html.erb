@@ -1,0 +1,23 @@
+
+<div class="card m-3 shadow d-flex flex-column justify-content-between bg-light border-0 p-1">
+
+   <div> <%= comment.comment_body %> </div>
+
+   <div class="d-flex align-items-center justify-content-end">
+      <span class="text-muted"> By: <%= comment.name %> </span>
+      <button type="button" class="btn btn-outline-danger btn-sm border-0"><%= link_to '❌', [comment.article, comment], method: :delete, data: {confirm: 'Delete chosen comment PERMANENTLY?'}, class: "text-decoration-none text-white" %></button>
+   </div>
+</div>
+
+
+
+
+
+
+
+          
+
+
+      
+
+

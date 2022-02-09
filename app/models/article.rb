@@ -2,4 +2,8 @@ class Article < ApplicationRecord
    validates :title,  presence: true
    validates :author,  presence: true
    validates :text,  presence: true, length: { minimum: 5 }
+
+   has_many :comments, dependent: :destroy
+      # dependent: :destroy means the comments related 
+      # to the specific post in mention get deleted if the post does.
 end
